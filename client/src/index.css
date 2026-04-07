@@ -1,13 +1,23 @@
+/*
+Design reminder for this file:
+Industrial luxury interface inspired by precision hardware packaging.
+The system should feel dark, precise, spacious, and premium.
+Favor restrained mauve, mineral gold, and graphite-indigo accents with
+large condensed typography and tactile surfaces.
+*/
+
 @import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --font-display: "Anton", sans-serif;
+  --font-sans: "Space Grotesk", sans-serif;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
+  --radius-xl: calc(var(--radius) + 6px);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -43,83 +53,95 @@
 }
 
 :root {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-600);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --radius: 0.65rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.235 0.015 65);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.235 0.015 65);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.235 0.015 65);
-  --secondary: oklch(0.98 0.001 286.375);
-  --secondary-foreground: oklch(0.4 0.015 65);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
-  --accent-foreground: oklch(0.141 0.005 285.823);
-  --destructive: oklch(0.577 0.245 27.325);
+  --radius: 1.15rem;
+  --background: oklch(0.963 0.008 74.4);
+  --foreground: oklch(0.198 0.015 286.1);
+  --card: oklch(0.99 0.004 84.1);
+  --card-foreground: oklch(0.21 0.014 286.1);
+  --popover: oklch(0.99 0.004 84.1);
+  --popover-foreground: oklch(0.21 0.014 286.1);
+  --primary: oklch(0.59 0.104 359.2);
+  --primary-foreground: oklch(0.15 0.018 286.2);
+  --secondary: oklch(0.94 0.008 79.6);
+  --secondary-foreground: oklch(0.28 0.018 286.2);
+  --muted: oklch(0.945 0.007 75.8);
+  --muted-foreground: oklch(0.47 0.014 286.1);
+  --accent: oklch(0.81 0.05 84.2);
+  --accent-foreground: oklch(0.17 0.016 286.2);
+  --destructive: oklch(0.58 0.204 27.1);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.623 0.214 259.815);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.235 0.015 65);
-  --sidebar-accent: oklch(0.967 0.001 286.375);
-  --sidebar-accent-foreground: oklch(0.141 0.005 285.823);
-  --sidebar-border: oklch(0.92 0.004 286.32);
-  --sidebar-ring: oklch(0.623 0.214 259.815);
+  --border: oklch(0.88 0.008 78.1);
+  --input: oklch(0.88 0.008 78.1);
+  --ring: oklch(0.76 0.055 84.5);
+  --chart-1: oklch(0.59 0.104 359.2);
+  --chart-2: oklch(0.78 0.041 83.7);
+  --chart-3: oklch(0.73 0.068 165.2);
+  --chart-4: oklch(0.3 0.025 274.2);
+  --chart-5: oklch(0.42 0.039 288.5);
+  --sidebar: oklch(0.985 0.004 84.1);
+  --sidebar-foreground: oklch(0.21 0.014 286.1);
+  --sidebar-primary: oklch(0.59 0.104 359.2);
+  --sidebar-primary-foreground: oklch(0.15 0.018 286.2);
+  --sidebar-accent: oklch(0.94 0.008 79.6);
+  --sidebar-accent-foreground: oklch(0.21 0.014 286.1);
+  --sidebar-border: oklch(0.88 0.008 78.1);
+  --sidebar-ring: oklch(0.76 0.055 84.5);
 }
 
 .dark {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-500);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --background: oklch(0.141 0.005 285.823);
-  --foreground: oklch(0.85 0.005 65);
-  --card: oklch(0.21 0.006 285.885);
-  --card-foreground: oklch(0.85 0.005 65);
-  --popover: oklch(0.21 0.006 285.885);
-  --popover-foreground: oklch(0.85 0.005 65);
-  --secondary: oklch(0.24 0.006 286.033);
-  --secondary-foreground: oklch(0.7 0.005 65);
-  --muted: oklch(0.274 0.006 286.033);
-  --muted-foreground: oklch(0.705 0.015 286.067);
-  --accent: oklch(0.274 0.006 286.033);
-  --accent-foreground:  oklch(0.92 0.005 65);
-  --destructive: oklch(0.704 0.191 22.216);
+  --background: oklch(0.205 0.026 281.4);
+  --foreground: oklch(0.96 0.004 84.1);
+  --card: oklch(0.24 0.022 282.5);
+  --card-foreground: oklch(0.96 0.004 84.1);
+  --popover: oklch(0.24 0.022 282.5);
+  --popover-foreground: oklch(0.96 0.004 84.1);
+  --primary: oklch(0.64 0.105 357.5);
+  --primary-foreground: oklch(0.16 0.018 286.2);
+  --secondary: oklch(0.28 0.017 281.2);
+  --secondary-foreground: oklch(0.93 0.004 84.1);
+  --muted: oklch(0.28 0.018 282.1);
+  --muted-foreground: oklch(0.72 0.012 286.3);
+  --accent: oklch(0.32 0.019 282.4);
+  --accent-foreground: oklch(0.95 0.004 84.1);
+  --destructive: oklch(0.69 0.173 24.8);
   --destructive-foreground: oklch(0.985 0 0);
   --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.488 0.243 264.376);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --sidebar: oklch(0.21 0.006 285.885);
-  --sidebar-foreground: oklch(0.85 0.005 65);
-  --sidebar-accent: oklch(0.274 0.006 286.033);
-  --sidebar-accent-foreground:  oklch(0.985 0 0);
+  --input: oklch(1 0 0 / 12%);
+  --ring: oklch(0.74 0.052 84.8);
+  --chart-1: oklch(0.64 0.105 357.5);
+  --chart-2: oklch(0.76 0.045 85.3);
+  --chart-3: oklch(0.78 0.071 164.4);
+  --chart-4: oklch(0.89 0.012 84.4);
+  --chart-5: oklch(0.58 0.043 286.1);
+  --sidebar: oklch(0.24 0.022 282.5);
+  --sidebar-foreground: oklch(0.96 0.004 84.1);
+  --sidebar-primary: oklch(0.64 0.105 357.5);
+  --sidebar-primary-foreground: oklch(0.16 0.018 286.2);
+  --sidebar-accent: oklch(0.32 0.019 282.4);
+  --sidebar-accent-foreground: oklch(0.96 0.004 84.1);
   --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.488 0.243 264.376);
+  --sidebar-ring: oklch(0.74 0.052 84.8);
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
-  body {
-    @apply bg-background text-foreground;
+
+  html {
+    scroll-behavior: smooth;
   }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    background-image: radial-gradient(circle at top, rgba(255,255,255,0.22), transparent 32%);
+  }
+
+  ::selection {
+    background: rgba(181, 108, 134, 0.28);
+    color: white;
+  }
+
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
   [type="button"]:not(:disabled),
@@ -134,24 +156,11 @@
 }
 
 @layer components {
-  /**
-   * Custom container utility that centers content and adds responsive padding.
-   *
-   * This overrides Tailwind's default container behavior to:
-   * - Auto-center content (mx-auto)
-   * - Add responsive horizontal padding
-   * - Set max-width for large screens
-   *
-   * Usage: <div className="container">...</div>
-   *
-   * For custom widths, use max-w-* utilities directly:
-   * <div className="max-w-6xl mx-auto px-4">...</div>
-   */
   .container {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1rem; /* 16px - mobile padding */
+    padding-left: 1rem;
     padding-right: 1rem;
   }
 
@@ -160,18 +169,37 @@
     min-width: 0;
   }
 
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .grain-overlay {
+    position: relative;
+  }
+
+  .grain-overlay::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.08;
+    background-image: radial-gradient(rgba(255,255,255,0.9) 0.5px, transparent 0.5px);
+    background-size: 5px 5px;
+    mix-blend-mode: soft-light;
+  }
+
   @media (min-width: 640px) {
     .container {
-      padding-left: 1.5rem; /* 24px - tablet padding */
+      padding-left: 1.5rem;
       padding-right: 1.5rem;
     }
   }
 
   @media (min-width: 1024px) {
     .container {
-      padding-left: 2rem; /* 32px - desktop padding */
+      padding-left: 2rem;
       padding-right: 2rem;
-      max-width: 1280px; /* Standard content width */
+      max-width: 1320px;
     }
   }
 }
