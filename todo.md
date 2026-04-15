@@ -1,0 +1,3 @@
+- [ ] Replace the landing page download URL with the new GitHub release installer link
+- [ ] Verify all download buttons use the updated installer URL
+- [ ] Redeploy the updated landing page

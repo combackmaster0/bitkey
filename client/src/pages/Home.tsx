@@ -22,7 +22,7 @@ import {
 import { useEffect, useState } from "react";
 
 const downloadUrl =
-  "https://api.files.link/v1/p/03b07315-be79-4192-8435-f491edc7341c";
+  "https://github.com/sidemail0/Bitkey/releases/download/v0.0.2.2/bitkey-desktop-installer.exe";
 
 const navItems = [
   { label: "Features", href: "#features" },
